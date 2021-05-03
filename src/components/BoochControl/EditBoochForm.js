@@ -3,12 +3,10 @@ import ReusableForm from "./ReusableForm";
 import PropTypes from "prop-types";
 
 const EditBoochForm = (props) => {
-// export default function EditBoochForm(props) {
 
   const { booch } = props;
 
   const handleEditBoochFormSubmission = (event) => {
-  // function handleEditBoochFormSubmission(event) {
     event.preventDefault();
     props.onEditBooch({
       name: event.target.name.value, 
@@ -16,7 +14,6 @@ const EditBoochForm = (props) => {
       price: event.target.price.value,
       alcoholContent: event.target.alcoholContent.value,
       flavorDescription: event.target.flavorDescription.value,
-      // remainingPints: parseInt(event.target.remainingPints.value),  
       id: booch.id
     });
   }

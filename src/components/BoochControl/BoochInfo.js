@@ -7,8 +7,6 @@ const boochInfoImgStyle = {
   filter: 'drop-shadow(0 0 10px #000000)',
   margin: 'auto',
   padding: '3%',
-  // width: '500px',
-  // objectFit: 'contain'
 }
 
 const boochInfoTextStyle = {
@@ -27,7 +25,6 @@ const boochInfoPStyle = {
 }
 
 const BoochInfo = () => {
-// export default function BoochInfo() {
   return (
     <>
       <Grid style={boochInfoTextStyle} item xs={12} sm={12} md={6} lg={6} xl={6}>
@@ -40,7 +37,7 @@ const BoochInfo = () => {
       </Grid>
 
       <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-        <img style={boochInfoImgStyle} src={BoochInfoImg} alt='Eighth slide' />
+        <img style={boochInfoImgStyle} src={BoochInfoImg} alt='Drink image' />
       </Grid>
     </>
   );

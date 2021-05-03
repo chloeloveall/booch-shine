@@ -27,7 +27,6 @@ const useStyles = makeStyles(() => ({
 }));
 
 const ImageCarousel = () => {
-// export default function ImageCarousel() {
   const classes = useStyles()
 
   return (

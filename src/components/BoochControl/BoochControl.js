@@ -6,26 +6,15 @@ import EditBoochForm from './EditBoochForm';
 import BoochInfo from './BoochInfo';
 import Grid from '@material-ui/core/Grid';
 
-// const boochInfoButtonStyle = {
-  // marginTop: '-50px',
-  // marginBottom: '3%',
-  // color: 'blue',
-  // width: '100%',
-  // marginLeft: 0,
-// }
-
 const boochInfoStyles = {
-  // padding: '3%',
   backgroundColor: '#234A50',
 }
 
 const newBoochFormStyles = {
-  // padding: '3%',
   backgroundColor: '#234A50',
 }
 
 const boochListStyles = {
-  // padding: '3%',
   backgroundColor: '#234A50',
 }
 
@@ -82,7 +71,6 @@ export default class BoochControl extends React.Component {
   }
 
   handleEditClick = () => {
-    console.log("handleEditClick reached!");
     this.setState({
       editing: true
     });
@@ -141,12 +129,10 @@ export default class BoochControl extends React.Component {
       buttonText = "Back";
     } else if (this.state.selectedBooch !== null) {
       currentlyVisibleState = <BoochDetail booch={this.state.selectedBooch} onClickingDelete={this.handleDeletingBooch} onClickingEdit={this.handleEditClick} onClickingBuy={this.handleBuyingBooch} />
-      //back or submit? not sure yet
       buttonText = 'Back';
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewBoochForm onNewBoochCreation={this.handleAddingNewBoochToList} />
       buttonText = 'Back';
-      // buttonStyle = boochInfoButtonStyle;
       useStyles = newBoochFormStyles;
     } else if (this.state.mainBoochList.length >= 1) {
       currentlyVisibleState = <BoochList boochList={this.state.mainBoochList} onBoochSelection={this.handleChangingSelectedBooch} />
@@ -156,7 +142,6 @@ export default class BoochControl extends React.Component {
     } else {
       currentlyVisibleState = <BoochInfo onBoochSelection={this.handleChangingSelectedBooch} />
       buttonText = "Add a New Booch";
-      // buttonStyle = boochInfoButtonStyle;
       useStyles = boochInfoStyles;
     }
     return (
@@ -164,14 +149,10 @@ export default class BoochControl extends React.Component {
         <Grid 
           container
           direction="row"
-          // justify="center"
-          // alignItems="stretch"
           style={useStyles}
         > 
           {currentlyVisibleState}
-          {/* <Grid direction='row'> */}
-            <button style={buttonStyle} onClick={this.handleClick}>{buttonText}</button>
-          {/* </Grid> */}
+          <button style={buttonStyle} onClick={this.handleClick}>{buttonText}</button>
         </Grid>
       </>
     );
