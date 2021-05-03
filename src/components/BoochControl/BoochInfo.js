@@ -37,7 +37,7 @@ const BoochInfo = () => {
       </Grid>
 
       <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-        <img style={boochInfoImgStyle} src={BoochInfoImg} alt='Drink image' />
+        <img style={boochInfoImgStyle} src={BoochInfoImg} alt='JuneShine and pineapple' />
       </Grid>
     </>
   );
