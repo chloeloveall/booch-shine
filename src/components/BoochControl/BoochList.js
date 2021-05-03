@@ -3,7 +3,6 @@ import Booch from './Booch';
 import PropTypes from 'prop-types';
 
 const BoochList = (props) => {
-// export default function BoochList(props) {
   return (
     <>
       {props.boochList.map((booch) => 

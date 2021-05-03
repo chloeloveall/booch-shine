@@ -1,6 +1,5 @@
 import React from 'react';
 import Contact from './Contact';
-import PromoBottom from './PromoBottom';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
@@ -13,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Footer = () => {
-// export default function Footer() {
 
   const classes = useStyles();
 
@@ -27,7 +25,6 @@ const Footer = () => {
             <Contact />
           </Grid>
         </Grid>
-        <PromoBottom />
       </div>
     </>
   );
